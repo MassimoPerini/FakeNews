@@ -1,0 +1,529 @@
+/* ------------ PARAMS ------------- */
+$brand-primary: #105592;
+$navbar-height: 80px;
+$navbar-default-bg: $brand-primary;
+$secondary-text: #FFFFFF;
+$navbar-default-link-color: #FFF;
+$navbar-default-link-hover-bg:#272727;
+$navbar-default-link-hover-color: #7dbbf1;
+$background-color: #FFFFFF;
+$color-bar: #8dbbf6;
+$aside-size: 2;
+$brand-selected: #226b92;
+$brand-left-margin: 15px;
+$form-width: 450px;
+$login-form-margin: 100px;
+
+@import "variables";
+@import "_bootstrap.scss";
+@import "bootswatch";
+@import "loading";
+
+/* ------------ BODY ------------- */
+body{
+  width: 100%;
+  height: 100%;
+  padding-top: $navbar-height;
+  display: table;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0px;
+  background-color:#105592;
+}
+
+/* ------------ HEADER ------------- */
+header {
+  min-height: 500px;
+
+  //Create the parallax scrolling effect
+  background: no-repeat fixed center;
+  background-size: cover;
+
+  text-align: center;
+  @extend .center-block;
+
+  >div{
+    @include make-md-column(12);
+    @include make-xs-column(12);
+    @include make-sm-column(12);
+    @include make-lg-column(12);
+
+    >h1{
+      background-color: $navbar-default-link-hover-bg;
+      color: white;
+      display: inline-block;
+      opacity: 0.85;
+    }
+  }
+
+  img{
+    display: table-cell;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  @media (min-width: $screen-md-min) {
+    img {
+      width: 50%;
+    }
+  }
+
+}
+
+header.doctor{
+
+  text-align: center;
+
+  >div.profile {
+
+    z-index: 10;
+
+    margin-top: 350px;
+    height: 250px;
+
+    >img{
+      @extend .img-circle;
+      height: 100%;
+      /*FIX*/
+      position: relative;
+      width: auto;
+      display: inline-block;
+    }
+  }
+}
+
+/* ------------ COMPONENTS ------------- */
+// Cards
+.card{
+  box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.15);
+  transition: 0.3s;
+  border-radius: 4px;
+  background-color: #fff;
+  >a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border:0;
+    margin: 0;
+    text-decoration: none;
+    color: #525c65;
+    transition: color 0.3s ease;
+  }
+  >a:hover{
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.2);
+  }
+  .card-header{
+    margin: 0;
+    padding: 20px;
+    background-color:rgba(16, 85, 146, 0.65);
+  }
+  .card-text{
+    padding: 8px;
+    text-align: center;
+    color: black;
+  }
+  img{
+    width:100%;
+  }
+}
+.card:hover{
+  box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.2);
+}
+
+//Default button
+.button{
+  @extend .btn, .btn-primary, .btn-block;
+//  background-color: $secondary-color;
+//  color: $secondary-text;
+//  border-radius: 2px;
+    height: 65px;
+    font-size: 22pt;
+}
+
+center{
+  text-align: center;
+  >h1{
+    margin: 0px;
+    padding: 16px;
+  }
+}
+
+/* ------------ CONTENTS ------------- */
+.one-sided{
+  width: 100%;
+  @extend .container-fluid;
+  background-color: white;
+  >section {
+    @include make-row;
+    @include clearfix;
+    > section{
+      @extend div;
+      @include make-md-column(9);
+      @include make-xs-column(12);
+      @include make-sm-column(9);
+      @include make-lg-column(9);
+    }
+    > aside {
+      @extend div;
+      @include make-md-column(3);
+      @include make-xs-column(12);
+      @include make-sm-column(3);
+      @include make-lg-column(3);
+    }
+    >article{
+      @extend div;
+      @include make-md-column(12);
+      @include make-xs-column(12);
+      @include make-sm-column(12);
+      @include make-lg-column(12);
+    }
+  }
+}
+
+
+.private-area-form {
+
+  .register-form {
+    display: none;
+  }
+
+  .forget-form{
+    display: none;
+  }
+}
+  .private-area-form {
+
+    img{
+      width:($form-width - $login-form-margin) * 0.8;
+      margin-bottom: $login-form-margin / 2;
+      height: auto;
+    }
+
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: $form-width;
+    margin: 0 auto $login-form-margin;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+    input {
+      font-family: "Roboto", sans-serif;
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    button {
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+    }
+    p {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+    }
+    p a {
+      color: $brand-primary;
+      text-decoration: none;
+    }
+  }
+
+
+.only-form{
+  @extend .container;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  @media (min-width: $form-width) {
+    width: $form-width;
+  }
+}
+
+
+form{
+  >div:not(.checkbox){
+      @extend .form-group;
+  }
+
+  input[type='submit'] {
+    background-color: #00A7E1;
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    &:hover{
+      background-color: #0099e1;
+    }
+    &:active{
+      background-color: #0073e1;
+    }
+  }
+
+
+  input:not([type='checkbox']){
+    @extend .form-control;
+  }
+
+
+  textarea{
+    @extend .form-control;
+  }
+}
+
+/*TABLE*/
+
+table{
+  @extend .table;
+}
+
+table {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  border-collapse:
+          collapse; border-spacing: 0;
+}
+
+td, th {
+  border: 1px solid transparent; /* No more visible border */
+  height: 30px;
+  transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+th {
+  background: #DFDFDF;  /* Darken header a bit */
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td { background: #F1F1F1; }
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+tr:nth-child(odd) td { background: #FEFEFE; }
+
+tr td:hover {
+  background: #666;
+  color: #FFFFFF;
+  a{
+    color: #FFFFFF;
+  }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  }
+
+  tr { border: 1px solid #ccc; }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50% !important;
+    white-space: normal;
+    text-align:left;
+
+    &:before{
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align:left;
+      font-weight: bold;
+      content: attr(data-title);
+    }
+  }
+}
+
+/*MAIN LAYOUT*/
+
+// Two sided is used in 2-sided pages
+.two-sided{
+  @extend .container-fluid;
+  >article{
+    @extend div;
+    @include make-xs-column(12);
+    @include make-sm-column(12 - $aside-size);
+    @include make-md-column(12 - $aside-size);
+    @include make-lg-column(12 - $aside-size);
+  }
+  >aside{
+    @extend div;
+    @include make-xs-column(12);
+    @include make-sm-column($aside-size);
+    @include make-md-column($aside-size);
+    @include make-lg-column($aside-size);
+
+    .card{
+      @include make-xs-column(4);
+      @include make-sm-column(12);
+      @include make-md-column(12);
+      @include make-lg-column(12);
+
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+// List base (defines images cards etc)
+.list{
+  @extend div;
+  >article{
+    margin-bottom: 2%;
+  }
+}
+
+// List Large (locations)
+.list-lg{
+  @extend .list;
+  >article{
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    @include make-md-column(6);
+    @include make-lg-column(6);
+  }
+}
+
+// List Medium (Areas)
+.list-md{
+  @extend .list;
+  > article{
+    @include make-xs-column(6);
+    @include make-sm-column(4);
+    @include make-md-column(2);
+    @include make-lg-column(2);
+  }
+  @media (max-width: $screen-sm-min){
+    > article:nth-child(2n+1){
+      clear: left;
+    }
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-md-min){
+    > article:nth-child(3n+1){
+      clear: left;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    > article:nth-child(6n+1){
+      clear: left;
+    }
+  }
+}
+
+
+#content{
+  min-height: 100vh;
+  transform-origin: center bottom 0px;
+  transition: all 0.5s ease;
+  //box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
+  background-color: #FFFFFF;
+}
+
+
+body.tight #content {
+  transform: translateY(-60px) scale(0.9);
+  cursor: pointer;
+}
+
+/* ------------ FOOTER ------------- */
+footer{
+
+  @extend .container-fluid;
+
+  >section{
+    @include make-row;
+    @include clearfix;
+  }
+
+  width: 90%;
+  max-width: 1440px;
+  margin: 0px auto;
+  min-height: 200px;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  padding-top: 40px;
+
+  background-color: $navbar-default-bg;
+  color: $navbar-default-color;
+  text-align: center;
+//  width: 100%;
+  bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  .links{
+    @include make-md-column(4);
+  }
+  .locations{
+    @include make-md-column(12);
+  }
+
+  a{
+    color: $navbar-default-color;
+    text-decoration: none;
+    &:hover{
+      color:$navbar-default-link-hover-color;
+    }
+  }
+}
+
+
+//Home page
+section.navigation-child{
+  >div{
+    @include make-md-column(3);
+    margin-bottom: 10px;
+  }
+  .button
+  {
+    height: 40px;
+    font-size:16px;
+  }
+}
+
+.blurred{
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.picker__holder{
+  overflow-y: hidden;
+}
+/*end*/
