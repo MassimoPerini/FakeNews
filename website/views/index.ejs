@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("form").submit(function(e) {
+                //$("#booking-form").empty().append("<div class='loading' style='transform:scale(0.31);'><div></div><div></div></div>"),
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/reservation",
+                        data: $(this).serialize(),
+                        success: function(data) {
+                            $("#booking-form").empty().append("<h3 style='text-align: center'>Well done!</h3>");
+                        }
+                    }), e.preventDefault();
+            });
+        });
+    </script>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form >
+
+    </form>
+
+  <textarea>
+
+  </textarea>
+
+
+
+  </body>
+</html>

@@ -11,7 +11,7 @@ var path = require("path");
 var fs = require('fs');
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'CPM clinic', user:req.user });
+  res.render('index', { title: 'Demo Website', user:req.user });
 });
 
 fs.readdirSync(__dirname)

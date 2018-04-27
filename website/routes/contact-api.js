@@ -4,7 +4,6 @@
 
 var debug = require('debug')('api');
 var express = require('express');
-var models = require('../models');
 
 var router = express.Router();
 
@@ -42,6 +41,7 @@ var router = express.Router();
  *             message: error
  */
 router.post('/api/contact', function(req, res, next) {
+    /*
     models.inquiries.create({
         name: req.body.name,
         surname: req.body.surname,
@@ -56,6 +56,7 @@ router.post('/api/contact', function(req, res, next) {
         debug(err);
         return res.status(400).json({ message: "error" });
     });
+    */
 });
 
 /**
