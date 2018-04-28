@@ -7,7 +7,7 @@ public class TweetObj {
 	String id;
 	String tweet_text;
 	String user_id;
-	String in_reply_to_status_id;//"NULL" if no value
+	String in_reply_to_status_id;//"NULL" if no such value
 	List<String> hash_tags;
 	List<String> user_mentions;
 	Integer retweet_count;
