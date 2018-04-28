@@ -2,6 +2,10 @@ package datapreperator;
 
 import java.util.List;
 
+/**
+ * @author harilal
+ *  29-Apr-2018
+ */
 public class TweetObj {
 	String created_at;
 	String id;

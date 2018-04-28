@@ -1,5 +1,9 @@
 package datapreperator;
 
+/**
+ * @author harilal
+ *  29-Apr-2018
+ */
 public class UserObj {
 	String id;
 	String name;
