@@ -12,11 +12,15 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+/**
+ * @author harilal
+ *  29-Apr-2018
+ */
 public class DataPreprocessor {
 	public static void main(String[] args) {
 		try {
-			String input_file = "/home/harilal/Documents/Polimi_Academics/Second_Semester/Designing_Digital_Business_Innovation_Lab/Datasets/rumdect/crawled_tweets.json";
-			String output_file = "/home/harilal/Documents/Polimi_Academics/Second_Semester/Designing_Digital_Business_Innovation_Lab/Datasets/rumdect/formatted_tweets.json";
+			String input_file = "resources/crawled_tweets.json";
+			String output_file = "resources/formatted_tweets.json";
 
 			BufferedReader br = new BufferedReader(new FileReader(input_file));
 			BufferedWriter bw = new BufferedWriter(new FileWriter(output_file));

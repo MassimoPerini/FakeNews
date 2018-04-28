@@ -5,11 +5,15 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+/**
+ * @author harilal
+ *  29-Apr-2018
+ */
 public class DataSplitter {
 	public static void main(String[] args) {
 		try {
-			String input_file = "/home/harilal/Documents/Polimi_Academics/Second_Semester/Designing_Digital_Business_Innovation_Lab/Datasets/rumdect/Twitter.txt";
-			String output_file = "/home/harilal/Documents/Polimi_Academics/Second_Semester/Designing_Digital_Business_Innovation_Lab/Datasets/rumdect/Twitter_Formatted.txt";
+			String input_file = "resources/Twitter.txt";
+			String output_file = "resources/Twitter_Formatted.txt";
 
 			String line = null;
 			BufferedReader br = new BufferedReader(new FileReader(input_file));

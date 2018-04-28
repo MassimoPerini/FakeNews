@@ -11,11 +11,15 @@ import java.util.Set;
 import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 
+/**
+ * @author harilal
+ *  29-Apr-2018
+ */
 public class TwitterDataPreparator {
 	public static void main(String[] args) {
 		try {
-			String input_file = "/home/harilal/Documents/Polimi_Academics/Second_Semester/Designing_Digital_Business_Innovation_Lab/Datasets/rumdect/Twitter_Formatted.txt";
-			String output_file = "/home/harilal/Documents/Polimi_Academics/Second_Semester/Designing_Digital_Business_Innovation_Lab/Datasets/rumdect/Twitter_id.json";
+			String input_file = "resources/Twitter_Formatted.txt";
+			String output_file = "resources/Twitter_id.json";
 			
 			String line = null;
 			Set<String> tweetIdSet = new HashSet<String>();
