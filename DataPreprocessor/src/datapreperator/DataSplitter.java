@@ -19,6 +19,7 @@ public class DataSplitter {
 			BufferedReader br = new BufferedReader(new FileReader(input_file));
 			BufferedWriter bw = new BufferedWriter(new FileWriter(output_file));
 
+			int count = 0;
 			String[] splitArray = null;
 			while ((line = br.readLine()) != null) {
 				//System.out.println(line);
