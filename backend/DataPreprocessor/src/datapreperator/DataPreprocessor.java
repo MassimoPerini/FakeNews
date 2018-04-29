@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.Map;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -17,6 +19,12 @@ import com.google.gson.JsonParser;
  *  29-Apr-2018
  */
 public class DataPreprocessor {
+	private static Map<String, String> tweetIdClassMap;
+
+	static {
+		getFakeInfoOfTweets();
+	}
+
 	public static void main(String[] args) {
 		try {
 			String input_file = "resources/crawled_tweets.json";
@@ -37,6 +45,27 @@ public class DataPreprocessor {
 
 			br.close();
 			bw.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void getFakeInfoOfTweets() {
+		try {
+			String inputFile = "resources/Twitter_Formatted.txt";
+
+			tweetIdClassMap = Maps.newHashMap();
+
+			BufferedReader br = new BufferedReader(new FileReader(inputFile));
+			String line = null, lineArray[] = null;
+
+			while ((line = br.readLine()) != null) {
+				lineArray = line.split("\\s+");
+
+				tweetIdClassMap.put(lineArray[0], lineArray[2]);
+			}
+
+			br.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -163,13 +192,14 @@ public class DataPreprocessor {
 
 				tweetObj.user_id = userObj.id;
 
+				tweetObj.is_fake = Integer.parseInt(tweetIdClassMap.get(tweetObj.id));
+
 				Gson newGsonObj = new Gson();
 				formattedJson = newGsonObj.toJson(tweetObj);
 			}
 			return formattedJson;
 		} catch (Exception e) {
 			e.printStackTrace();
-			//return null;
 		}
 		return formattedJson;
 	}

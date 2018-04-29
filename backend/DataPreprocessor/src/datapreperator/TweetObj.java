@@ -17,4 +17,5 @@ public class TweetObj {
 	Integer retweet_count;
 	Integer favorite_count;
 	Boolean possibly_sensitive;//"NULL" if no value
+	Integer is_fake;
 }
