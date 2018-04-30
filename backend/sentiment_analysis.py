@@ -6,8 +6,8 @@ from watson_developer_cloud.natural_language_understanding_v1 import Features, E
 
 natural_language_understanding = NaturalLanguageUnderstandingV1(
     version='2017-02-27',
-    username='0bceda96-a518-4425-99ae-60f034b16963',
-    password='3YFWZ4kFEmeL')
+    username='USERNAME',
+    password='PASSWORD')
 
 with open('formatted_tweets.json') as json_data:
     d = json.load(json_data)
