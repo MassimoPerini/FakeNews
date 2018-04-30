@@ -1,35 +1,16 @@
 {
-  "name": "FakeNews",
-  "version": "1.0.0",
+  "name": "website",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=app,model,api node app.js",
-    "postinstall": "bower install"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "body-parser": "^1.17.2",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.0",
-    "ejs": "~2.5.5",
-    "express": "~4.14.1",
-    "express-session": "1.15.3",
-    "http-errors": "1.6.1",
-    "morgan": "~1.7.0",
-    "node-sass": "^4.5.3",
-    "pg": "6.2.3",
-    "serve-favicon": "~2.3.2",
-    "sha1": "^1.1.1",
-    "swagger-jsdoc": "1.9.4"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-uglify": "^2.3.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-jsdoc": "2.1.0",
-    "grunt-modernizr": "^1.0.2",
-    "grunt-sass": "^2.0.0"
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-handlebars": "^3.0.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
   }
 }

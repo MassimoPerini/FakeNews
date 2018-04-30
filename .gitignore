@@ -1,5 +1,11 @@
-public/
 *.class
+
+# Filippo Calzavara
+package-lock.json
+.env
+node_modules/
+public/.sass-cache/
+style.css.map
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -24,7 +30,6 @@ hs_err_pid*
 
 # Eclipse
 .metadata
-bin/
 tmp/
 *.tmp
 *.bak
