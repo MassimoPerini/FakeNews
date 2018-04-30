@@ -36,7 +36,7 @@ with open('response.json') as json_data:
     tweets_analysis = json.load(json_data)
 
 tweets_csv = open("tweets_dataset.csv", "w")
-tweets_csv.write("tweet_id, fake, retweet_on_favorite, joy, sadness, anger, fear, disgust, sentiment\n")
+tweets_csv.write("tweet_id, fake, joy, sadness, anger, fear, disgust, sentiment\n")
 
 tweet_formatted_index = 0
 
@@ -58,15 +58,6 @@ for tweet_analysis_index in range(len(tweets_analysis["tweets"])):
     tweets_csv.write(", ")
 
     tweets_csv.write(str(target_tweet_formatted["is_fake"]))
-    tweets_csv.write(", ")
-
-    number_favorite = target_tweet_formatted["favorite_count"]
-    number_retweet = target_tweet_formatted["retweet_count"]
-    if number_retweet != 0:
-        retweet_on_favorite = number_favorite/number_retweet
-    else:
-        retweet_on_favorite = 0
-    tweets_csv.write(str(retweet_on_favorite))
     tweets_csv.write(", ")
 
     total_joy = average_emotion(target_tweet_analysis, "joy")
