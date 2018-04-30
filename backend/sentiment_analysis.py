@@ -15,8 +15,8 @@ with open('formatted_tweets.json') as json_data:
 file  = open("./response.json", "w")
 file.write('{\n\t"tweets": [')
 #max_range = len(d["tweets"]) #all tweets
-min_range = 1100
-max_range = 1600
+min_range = 1000
+max_range = 3000
 for index in range(min_range, max_range):
 
     print(index, max_range)
@@ -35,7 +35,6 @@ for index in range(min_range, max_range):
         if index < max_range - 1:
             file.write(',')
     except:
-        print("an erorr occured")
         continue
 
 file.write('\n\t]\n}')
