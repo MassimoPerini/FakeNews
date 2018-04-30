@@ -1,5 +1,5 @@
-import json
 
+import json
 
 def average_emotion(target_tweet_analysis, target_emotion):
 
