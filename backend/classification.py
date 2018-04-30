@@ -19,7 +19,9 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 #Columns: tweet_id, fake, joy, sadness, anger, fear, disgust, sentiment
 
 data = pd.read_csv("./tweets_dataset.csv", header=0, sep=", ")
-print(data.columns)
+
+print(data.groupby('fake').mean())     #to check the mean for every column
+print(data.groupby('fake').std())       #to check the std for every column
 
 #Dropping the "fear" and the "sentiment" columns, they add noise and no information
 X = data.drop(data.columns[[5, 7]], axis=1)
@@ -27,9 +29,6 @@ y = data['fake']
 
 print("VALUE COUNTS:")
 print(data['fake'].value_counts())
-
-
-#print(data.groupby('fake').mean())     #to check the mean for every column
 
 X = StandardScaler().fit_transform(X)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
