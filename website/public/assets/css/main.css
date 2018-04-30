@@ -2341,7 +2341,7 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(255, 255, 255, 0.05);
+		background: rgba(255, 255, 255, 0.08);
 		border-radius: 0.25em;
 		border: none;
 		border: solid 1px rgba(255, 255, 255, 0.15);
@@ -3882,17 +3882,49 @@
 
 /* Intro */
 
-	#intro {
+	/* #intro {
 		background-attachment: fixed;
 		background-image: url("images/intro.svg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
-	}
+	} */
 
 		#intro p {
 			font-size: 1.25em;
 		}
+		#intro .inner {
+		  position: absolute;
+		  top: 20%;
+		  left: 0;
+		  right: 0;
+		  text-align: center;
+		}
+		#intro .inner h1 {
+			font-size: 4em;
+			color: white;
+			font-family: 'Merriweather', serif;
+			letter-spacing: 2px;
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+		#intro .inner p {
+			margin: 0;
+		}
+		#intro .inner form {
+		margin: 0 0 1em 0;
+		}
+		.tweetForm{
+			text-align: center;
+			width: 50%;
+			margin: auto;
+		}
+
+		.tweetForm section {
+			width: 100%;
+		}
+
+
 
 			@media screen and (max-width: 980px) {
 
