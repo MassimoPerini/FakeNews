@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
@@ -15,16 +16,23 @@ from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
-
-data = pd.read_csv("./tweets_dataset.csv", header=0)
-
 #Columns: tweet_id, fake, joy, sadness, anger, fear, disgust, sentiment
-X = data.iloc[:, 2:]
-y = data.iloc[:, 1]
+
+data = pd.read_csv("./tweets_dataset.csv", header=0, sep=", ")
+print(data.columns)
+
+#Dropping the "fear" and the "sentiment" columns, they add noise and no information
+X = data.drop(data.columns[[5, 7]], axis=1)
+y = data['fake']
+
 print("VALUE COUNTS:")
-print(data.iloc[:, 1].value_counts())
+print(data['fake'].value_counts())
+
+
+#print(data.groupby('fake').mean())     #to check the mean for every column
+
 X = StandardScaler().fit_transform(X)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
 names = ["Nearest Neighbors", "Linear SVM", "RBF SVM", "Gaussian Process",
          "Decision Tree", "Random Forest", "Neural Net", "AdaBoost",
@@ -42,6 +50,8 @@ classifiers = [
     GaussianNB(),
     QuadraticDiscriminantAnalysis()]
 
+
+
 for index, classifier in enumerate(classifiers):
 
     classifier.fit(X_train, y_train)
@@ -53,3 +63,5 @@ for index, classifier in enumerate(classifiers):
     print("\n\nCONFUSION MATRIX:\n")
     matrix = confusion_matrix(y_test, y_pred)
     print(matrix)
+
+
