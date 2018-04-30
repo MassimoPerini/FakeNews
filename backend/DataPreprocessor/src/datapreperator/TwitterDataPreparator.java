@@ -60,7 +60,6 @@ public class TwitterDataPreparator {
 				bw.write(gson.toJson(inputJson));
 				//break;
 			}*/
-			
 			bw.close();
 		} catch (Exception e) {
 			e.printStackTrace();
