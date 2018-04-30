@@ -17,7 +17,9 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
 
 data = pd.read_csv("./tweets_dataset.csv", header=0)
-X = data.iloc[:, 3:]
+
+#Columns: tweet_id, fake, joy, sadness, anger, fear, disgust, sentiment
+X = data.iloc[:, 2:]
 y = data.iloc[:, 1]
 print("VALUE COUNTS:")
 print(data.iloc[:, 1].value_counts())
