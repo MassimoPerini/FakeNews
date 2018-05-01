@@ -1622,7 +1622,7 @@
 	}
 
 	body {
-		background: #312450;
+		background: #022B48;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -2303,6 +2303,30 @@
 				form .field.half.first {
 					padding: 0 0.75em 0 0;
 				}
+
+					form .field.quarter {
+						width: 25%;
+						float: left;
+						padding: 0 0 0 0.75em;
+					}
+
+						form .field.quarter.first {
+							padding: 0 0.75em 0 0;
+							width: 75%;
+						}
+
+@media screen and (max-width: 480px) {
+	form .field.quarter {
+		width: 50%;
+		float: left;
+		padding: 0 0 0 0.75em;
+	}
+
+		form .field.quarter.first {
+			padding: 0 0.75em 0 0;
+			width: 50%;
+		}
+}
 
 		form > .actions {
 			margin: 2em 0 0 0 !important;
@@ -3311,7 +3335,7 @@
 			@media screen and (max-width: 736px) {
 
 				.wrapper.fullscreen {
-					padding: 2em 0;
+					padding: 0;
 					min-height: 0;
 				}
 
@@ -3380,7 +3404,7 @@
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: #2967a5;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3908,6 +3932,15 @@
 			font-weight: 700;
 			margin-bottom: 0;
 		}
+		@media screen and (max-width: 480px) {
+			#intro .inner {
+			  top: 7%;
+			}
+			#intro .inner h1 {
+				font-size: 3.5em;
+			}
+		}
+
 		#intro .inner p {
 			margin: 0;
 		}
@@ -3923,7 +3956,11 @@
 		.tweetForm section {
 			width: 100%;
 		}
-
+		@media screen and (max-width: 736px) {
+		.tweetForm{
+					width: 100%;
+				}
+		}
 
 
 			@media screen and (max-width: 980px) {
