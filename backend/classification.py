@@ -16,9 +16,12 @@ from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
-#Columns: tweet_id, fake, joy, sadness, anger, fear, disgust, sentiment
 
-data = pd.read_csv("./tweets_dataset.csv", header=0, sep=", ")
+CSV_INPUT_FILE = "./tweets_dataset.csv"
+SEP = ","
+
+#Columns: tweet_id, fake, joy, sadness, anger, fear, disgust, sentiment
+data = pd.read_csv(CSV_INPUT_FILE, header=0, sep=SEP)
 
 print(data.groupby('fake').mean())     #to check the mean for every column
 print(data.groupby('fake').std())       #to check the std for every column
