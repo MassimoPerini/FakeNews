@@ -2055,6 +2055,7 @@
 		border: solid 1px rgba(255, 255, 255, 0.15);
 		background: rgba(255, 255, 255, 0.05);
 		margin: 0 0 2em 0;
+		margin-top: 200px;
 	}
 
 		.features section {
@@ -3986,3 +3987,433 @@
 			}
 
 		}
+		#containerRobot {
+		  overflow: hidden;
+
+		}
+		@keyframes blue-lower-dot1 {
+        0%   { background:#2497B4; }
+        50%  { background:#E33568; }
+        100%   { background:#2497B4; }
+    }
+@keyframes blue-lower-dot2 {
+        0%   { background:#E33568; }
+        50%  { background:#2497B4; }
+        100%   { background:#E33568; }
+    }
+@keyframes blue-lower-dot3 {
+        0%   { background:#2497B4; }
+        50%  { background:#E33568; }
+        100%   { background:#2497B4; }
+    }
+@keyframes blue-mid-dot1 {
+        0%   { background:#E33568; }
+        50%  { background:#2497B4; }
+        100%   { background:#E33568; }
+    }
+@keyframes blue-mid-dot2 {
+        0%   { background:#2497B4; }
+        50%  { background:#E33568; }
+        100%   { background:#2497B4; }
+    }
+@keyframes blue-mid-dot3 {
+        0%   { background:#E33568; }
+        50%  { background:#2497B4; }
+        100%   { background:#E33568; }
+    }
+@keyframes blue-wheel-line1 {
+        0%   { background:#3F3F3F; }
+        50%  { background:#2497B4; }
+        100%   { background:#3F3F3F; }
+    }
+@keyframes blue-wheel-line2 {
+        0%   { background:#3F3F3F; }
+        50%  { background:#2497B4; }
+        100%   { background:#3F3F3F; }
+    }
+@keyframes blue-wheel-line3 {
+        0%   { background:#3F3F3F; }
+        50%  { background:#2497B4; }
+        100%   { background:#3F3F3F; }
+    }
+@keyframes blue-wheel-line4 {
+        0%   { background:#3F3F3F; }
+        50%  { background:#2497B4; }
+        100%   { background:#3F3F3F; }
+    }
+
+@keyframes blue-eye {
+    0%   { top: 165px;left: 217px;}
+    25%  { top: 167px;left: 219px;}
+    50%  { top: 165px;left: 221px;}
+    75%  { top: 167px;left: 219px;}
+    100% { top: 165px;left: 217px;}
+}
+
+@keyframes blue-top-box {
+    0%   { top: 195px;left: 200px;}
+    50%  { top: 195px;left: 282px;}
+    100% { top: 195px;left: 200px;}
+}
+
+
+.blue-right-wheel {
+  position: fixed;
+  width: 50px;
+  height: 30px;
+  top: 280px;
+  left: 290px;
+  z-index: 5;
+  border: 5px solid #3F3F3F;
+  background:#2497B4;
+  border-radius: 25px;
+}
+
+
+
+.blue-wheel-front {
+  position: fixed;
+  width: 170px;
+  height: 30px;
+  top: 280px;
+  left: 170px;
+  z-index: 3;
+  border: 5px solid #3F3F3F;
+  background: #54C8EF;
+  border-radius: 25px;
+  overflow:hidden;
+}
+.blue-wheel-outline {
+  position: fixed;
+  width: 170px;
+  height: 30px;
+  top: 280px;
+  left: 170px;
+  z-index: 3;
+  border: 5px solid #3F3F3F;
+  border-radius: 25px;
+  overflow:hidden;
+}
+
+.blue-wheel-shade {
+  position: fixed;
+  width: 150px;
+  height: 14px;
+  top: 301px;
+  left: 175px;
+  z-index: -2;
+  background: #2497B4;
+  border-bottom-left-radius: 25px;
+}
+
+.blue-wheel-line1 {
+  position: fixed;
+  width: 120px;
+  height: 5px;
+  top: 308px;
+  left: 175px;
+  z-index: -1;
+  background:#3F3F3F;
+  animation-name: blue-wheel-line1;
+  animation-duration: 300ms;
+  animation-delay:300ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-wheel-line2 {
+  position: fixed;
+  width: 120px;
+  height: 5px;
+  top: 301px;
+  left: 175px;
+  z-index: -1;
+  background:#3F3F3F;
+  animation-name: blue-wheel-line2;
+  animation-duration: 300ms;
+  animation-delay:200ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-wheel-line3 {
+  position: fixed;
+  width: 120px;
+  height: 5px;
+  top: 294px;
+  left: 175px;
+  z-index: -1;
+  background:#3F3F3F;
+  animation-name: blue-wheel-line3;
+  animation-duration: 300ms;
+  animation-delay:100ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-wheel-line4 {
+  position: fixed;
+  width: 120px;
+  height: 5px;
+  top: 287px;
+  left: 175px;
+  z-index: -1;
+  background:#3F3F3F;
+  animation-name: blue-wheel-line4;
+  animation-duration: 300ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-body {
+  position: fixed;
+  width: 110px;
+  height: 146px;
+  top: 140px;
+  left: 200px;
+  z-index: -3;
+  border: 5px solid #3F3F3F;
+  background:#54C8EF;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  overflow:none;
+}
+
+.blue-body-line1 {
+  position: fixed;
+  width: 110px;
+  height: 5px;
+  top: 255px;
+  left: 200px;
+  z-index: -1;
+  background:#3F3F3F;
+}
+
+.blue-body-line2 {
+  position: fixed;
+  width: 110px;
+  height: 5px;
+  top: 225px;
+  left: 200px;
+  z-index: -1;
+  background:#3F3F3F;
+}
+
+.blue-body-line3 {
+  position: fixed;
+  width: 110px;
+  height: 5px;
+  top: 194px;
+  left: 200px;
+  z-index: -1;
+  background:#3F3F3F;
+}
+
+.blue-lower-dot1 {
+  position: fixed;
+	width: 15px;
+  height: 15px;
+  top: 263px;
+  left: 220px;
+  z-index: -1;
+  background:#2497B4;
+  border-radius: 100%;
+  border: 4px solid #3F3F3F;
+  animation-name: blue-lower-dot1;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-lower-dot2 {
+  position: fixed;
+	width: 15px;
+  height: 15px;
+  top: 263px;
+  left: 250px;
+  z-index: -1;
+  background:#E33568;
+  border-radius: 100%;
+  border: 4px solid #3F3F3F;
+  animation-name: blue-lower-dot2;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-lower-dot3 {
+  position: fixed;
+	width: 15px;
+  height: 15px;
+  top: 263px;
+  left: 280px;
+  z-index: -1;
+  background:#2497B4;
+  border-radius: 100%;
+  border:4px solid #3F3F3F;
+  animation-name: blue-lower-dot3;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-lower-triangle {
+  position: fixed;
+	width: 0;
+	height: 0;
+  top:260px;
+  left:205px;
+  z-index:4;
+	border-top: 10px solid #2497B4;
+	border-right: 10px solid transparent;
+}
+
+.blue-mid-dot1 {
+  position: fixed;
+	width: 15px;
+  height: 15px;
+  top: 235px;
+  left: 220px;
+  z-index: -1;
+  background:#E33568;
+  border-radius: 100%;
+  border: 4px solid #3F3F3F;
+  animation-name: blue-mid-dot1;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-mid-dot2 {
+  position: fixed;
+	width: 15px;
+  height: 15px;
+  top: 235px;
+  left: 250px;
+  z-index: -1;
+  background:#2497B4;
+  border-radius: 100%;
+  border: 4px solid #3F3F3F;
+  animation-name: blue-mid-dot2;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-mid-dot3 {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  top: 235px;
+  left: 280px;
+  z-index: -1;
+  background:#E33568;
+  border-radius: 100%;
+  border: 4px solid #3F3F3F;
+  animation-name: blue-mid-dot3;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-mid-triangle {
+  position: fixed;
+	width: 0;
+	height: 0;
+  top:230px;
+  left:205px;
+  z-index:4;
+	border-top: 10px solid #2497B4;
+	border-right: 10px solid transparent;
+}
+
+.blue-top-box {
+  position: fixed;
+  width: 25px;
+  height: 20px;
+  top: 190px;
+  left: 215px;
+  z-index: -1;
+  background:#2497B4;
+  border: 5px solid #3F3F3F;
+    animation-name: blue-top-box;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-eye {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  top: 165px;
+  left: 219px;
+  z-index: -1;
+  background:#FFFFFF;
+  border-radius: 100%;
+  border: 5px solid #3F3F3F;
+  animation-name: blue-eye;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.blue-head {
+  position: fixed;
+  width: 110px;
+  height: 54px;
+  top: 140px;
+  left: 200px;
+  z-index: -1;
+  border: 5px solid #3F3F3F;
+  background:#54C8EF;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  overflow: hidden;
+	border-bottom: 0;
+}
+
+.blue-head-line {
+  position: fixed;
+  width: 110px;
+  height: 50px;
+  top: 140px;
+  left: 200px;
+  z-index: 3;
+  border: 5px solid #3F3F3F;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  overflow: hidden;
+	border-bottom: 0;
+}
+
+.blue-glare1 {
+  position:relative;
+	width: 20px;
+	height: 50px;
+	transform: skew(40deg);
+	background: #7FD6F2;
+  left: 75px;
+}
+
+.blue-glare2 {
+  position:relative;
+	width: 10px;
+	height: 50px;
+	transform: skew(40deg);
+	background: #7FD6F2;
+  left: 60px;
+  top: -50px;
+}
