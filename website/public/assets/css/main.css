@@ -3470,7 +3470,6 @@ body.is-loading #sidebar nav ul li {
 }
 
 .demoFakeTweets .tweet1 {
-  cursor: zoom-in;
   top: 0px;
   left: 0px;
   transition: top 1s ease;
@@ -3481,7 +3480,6 @@ body.is-loading #sidebar nav ul li {
 }
 
 .demoFakeTweets .tweet2 {
-  cursor: zoom-in;
   top: 30px;
   left: 30px;
   transition: top 1s ease;
