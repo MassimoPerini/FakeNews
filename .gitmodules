@@ -1,0 +1,3 @@
+[submodule "FakeNews-Detector"]
+	path = FakeNews-Detector
+	url = https://github.com/hichameyessou/FakeNews-Detector
