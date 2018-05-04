@@ -3273,7 +3273,7 @@ body.is-ie #sidebar>.inner {
 }
 
 #sidebar nav a:before {
-  background: #012232;
+  background: #015984;
 }
 
 #sidebar nav a:after {
@@ -3412,9 +3412,11 @@ body.is-loading #sidebar nav ul li {
   }
 }
 
-#intro .inner p {
+/* Check tweet form */
+
+/* #intro .inner p {
   margin: 0;
-}
+} */
 
 #intro .inner form {
   margin: 0 0 1em 0;
