@@ -3440,9 +3440,9 @@ body.is-loading #sidebar nav ul li {
 
 /* Check tweet form */
 
-/* #intro .inner p {
+#intro .inner p {
   margin: 0;
-} */
+}
 
 #intro .inner form {
   margin: 0 0 1em 0;
