@@ -7,41 +7,31 @@ from watson_developer_cloud.natural_language_understanding_v1 import Features, E
 #If the input file is a JSON or a csv file.
 #One of them (only one) must me True
 
-JSON = False
-CSV = True
 SEP = '|'           #separator for the csv file
-FILE = '10_tweets_formatted_tweets.csv'
+INPUT_FILE = 'dataset/final_training_dataset_5_threshold_1500.csv'
+OUTPUT_FILE = 'sentiment_analysis/final_training_dataset_5_threshold_1500_sentiment.json'
 
 natural_language_understanding = NaturalLanguageUnderstandingV1(
     version='2017-02-27',
-    username='0bceda96-a518-4425-99ae-60f034b16963',
-    password='3YFWZ4kFEmeL')
+    username='4e6a0768-d640-4171-9606-f7dfd6b0f436',
+    password='VQV8LZ5LU27a')
 
-if JSON:
-    with open(FILE) as json_data:
-        json_file = json.load(json_data)
+df = pd.read_csv(INPUT_FILE, sep=SEP)
 
-elif CSV:
-    csv_file = pd.read_csv(FILE, sep=SEP)
-
-else:
-    raise Exception("Both JSON and CSV are false")
-
-file  = open("./response.json", "w")
+file = open(OUTPUT_FILE, "w")
 file.write('{\n\t"tweets": [')
 #max_range = len(d["tweets"]) #all tweets
-min_range = 0
-max_range = 300
-for index in range(min_range, max_range):
 
-    print(index, max_range)
+starting_tweet = 0
+finishing_tweet = len(df)
 
-    if JSON:
-        tweet_id = json_file["tweets"][index]["tweet_text"]
-        tweet_text = json_file["tweets"][index]["id"]
-    if CSV:
-        tweet_id = csv_file["id"][index]
-        tweet_text = csv_file["tweet_text"][index]
+#OUTPUT_FILE = OUTPUT_FILE + str(starting_tweet) + "_" + str(finishing_tweet) + ".json"
+
+for index in range(starting_tweet, finishing_tweet):
+
+    print(index, finishing_tweet)
+    tweet_id = df["id"][index]
+    tweet_text = df["url_content"][index]
 
     try:
         response = natural_language_understanding.analyze(
@@ -52,9 +42,10 @@ for index in range(min_range, max_range):
         file.write(',\n\t\t"tweet_analysis":\n\t\t\t')
         file.write(json.dumps(response))
         file.write('\n\t\t}')
-        if index < max_range - 1:
+        if index < finishing_tweet - 1:
             file.write(',')
-    except:
+    except Exception as e:
+        print(e)
         continue
 
 file.write('\n\t]\n}')
