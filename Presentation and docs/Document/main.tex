@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt,oneside,dvipsnames]{template}
+\usepackage{lipsum}
+
+
+
+\usepackage[english]{babel}
+\usepackage[style=ieee-alphabetic]{biblatex}
+\addbibresource{bibliography.bib} % with extension
+
+\title{Fake News} %
+
+\begin{document}
+
+%----------- Info ---------
+
+\titlec{Fake News} %titlec du fichier .pdf
+\UE{Business Innovation Lab}
+
+\supervisor{Balocco - Cavallo}
+
+\authors{Alessio \textsc{Baccelli} - xxxxxx \\
+        Gioele \textsc{Bigini} - xxxxxx \\
+        Filippo \textsc{Calzavara} - 898526 \\
+        Luca \textsc{Comoretto} - xxxxxx \\
+        Harilal \textsc{Orunkara Poyil} - xxxxxx \\
+        Massimo \textsc{Perini} - xxxxxx \\
+		Hichame \textsc{Yessou} - 898275
+        } %Nom des élèves
+
+%----------- Init -------------------
+        
+\createmargins %create magins
+\createcover %create cover
+\tableofcontents
+\newpage
+
+%------------ Corps du rapport ----------------
+
+\begin{flushleft}
+\chapter{Intro}\label{cap:Intro}
+\input{./chapters/intro.tex}
+\chapter{Brand Identity}\label{cap:Brand}
+\input{./chapters/brand_id.tex}
+\chapter{Front End}\label{cap:frontend}
+\input{./chapters/frontend.tex}
+\chapter{Back End}\label{cap:backend}
+\input{./chapters/backend.tex}
+\end{flushleft}
+
+\printbibliography
+%------------ Corps du rapport ----------------
+
+\end{document}

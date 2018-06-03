@@ -1,0 +1,78 @@
+\section{Functionalities} 
+Dr. Watson is a web application that allows the users to check and visualize statistics about tweets that may or may not contain fake news. To do so, it has to be an easy-to-use web application, with only a few steps to assess the tweet and the possibility to have the same user experience across desktop and mobile browsers. 
+The application is able to classify a sample of test data which the user can choose from, getting a confidence interval of the belonging to the class with the prevalence of the sentiment detected by Dr. Watson.
+For transparency, we added some sections to have a general overview of how Dr. Watson works and the deliverables needed for the project.
+
+We split the web application into six main sections that help the final user assess and understand the fake news issue.
+
+\section{Website Organization}
+\subsection{Sidebar}
+Explain the sidebar
+\subsection{Sections}
+\textbf{Landing Page:} 
+Dr. Watson has been designed on a singular web page in order to require the lowest possible number of steps from the user and avoid long wizards that could distort the user experience on the web application.
+The user will be scrolled down where will be allowed to try an example.\\~\\
+
+\textbf{Try Fake News:}
+This section allows checking Fake News by simply clicking on the sample shown. This will check the veracity of the tweet of will show on the right the outcome of the analysis carried out by Dr. Watson.
+In order to keep a high simplicity across different devices, we chose to show only three tweets per time, while allowing the user to shuffle across the dataset of tweets. \\~\\
+
+\textbf{How it works:}
+Hereby we are showing a high-level overview of how the system is structured. 
+As stated on the website, Dr. Watson is a complex application that has been built with several programming languages. 
+The front end interface is built in Node.js that is a JavaScript runtime built on the JavaScript Engine V8 of Chrome.
+The web-scraper used to retrieve, build and enrich the dataset has been written in Java interfacing with the Twitter APIs.
+The Machine Learning model has been written in Python in order to exploit libraries like Pandas where we have expertise.\\~\\
+
+\textbf{Statistics:}
+Visualization is a big part of the Data Science field, allowing either the developer and the user to have a look at mistakes, biases and other unexpected problems related to data. The growing availability of data has led to an increasing reliance on the data visualization providing a powerful way to communicate data-driven findings, motivating analyses and detecting flaws. In our case, we have a massive amount of data so we needed a trivial way to explain the distribution of the data and its analysis.
+We opted for 4 graphs, 3 of which describes the best the tweets, news and users in our dataset. The sentiment graph instead shows the distribution of the feelings contained in the tweets.\\~\\
+
+\textbf{Meet the team:}
+These two last sections describe the composition of the team and its coordination across the different components which Dr. Watson is made of.\\~\\
+
+\textbf{Deliverable \& Contact:}
+
+\section{Development}
+
+\subsection{Programming Lenguages} 
+CSS HTML JS
+
+\subsection{Infrastructures} 
+NodeJS
+
+\subsection{Automatic Deployment} 
+In projects where several engineers work together is a crucial point to have a centralized codebase and a unique deployment point in order to be coherent and updated with the features integrated.
+Since structurally the project is developed in two different applications we considered necessary to split the work in different repositories while leaving a link between them. This has been done setting up the main repository which has a submodule towards the front end project in order to have only commits concerning the web application.
+The second part has been accomplished by having an automatic deployment system that runs after every commit in the repository.
+We used the IBM Delivery Pipeline in order to trigger the build process and the deployment of an instance of the Node.js Cloud Foundry applications.
+This provides us with the possibility to commit a new functionality and within minutes to have it deployed on the domain of our web application with the advantage of testing it on several desktops and smartphones.
+
+\subsection{Tools}
+Highcharts
+
+\section{Code structure}
+Our front-end has been developed with Node.js and Express in order to have a minimal and robust framework that we could have shaped with our needs and integrated with the several APIs which Dr. Watson needs.
+We chose to use Handlebars as a template engine since we wanted to keep the majority of the business logic away from the representational layer of our web application. 
+Every component and section of Dr. Watson has been build in order to be completely responsive and to be correctly displayed on the majority of the display sizes.
+The web application is structured around the landing page, which allows us to have a very simple routing structure, with very few routes used for interactions with Twitter APIs.
+This was needed in order to allow the integration of multiple features from several engineers at different times. Having a strong and neat separation of concerns have been a key factor in the early decisions regarding the architecture of the web application and the structure of work-flow.
+The entry point of our application is the \verb|/bin/www| that initialize the low-level settings like port usage, HTTP server and the various listeners that it needs. Our core component is the app.js which set up the routes and the templating engine of our web application. 
+From here we render all the sections of the landing page through the index route, while the tweet route is left to interact with the Twitter APIs. We mainly have used 2 Twitter APIs which are the \verb|statuses/show/:id| and the \verb|statuses/oembed| that have been used to retrieve the JSON data of the tweets and the HTML attribute in order to embed the Tweets.
+
+We had several technologies to choose from to visualize our data, but we opted for Highcharts because it seemed to be the most responsive and with the highest number of features to be personalized. 
+We have the Javascript code of the Highcharts implementation in the public folder and they are fed with JSON, originating from the same folder, in order to enhance and speed up the loading time.
+We had to have a preprocess phase which enabled us to correctly display the data without incurring in invalid values or outliers.
+
+/*
+Gio riesci a scrivere qualcosa tu qui?
+*/
+
+\subsection{Big Picture}
+The idea on how all the system works briefly
+
+\subsection{Fake News Evaluation}
+evaluation in depth
+
+\subsection{Statistics}
+statistics in depth (preprocessing)
