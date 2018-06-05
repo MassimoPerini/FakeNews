@@ -139,15 +139,19 @@ Palette of colors used on the front-end/presentation layer of the project
 The first choice that the UX unit has taken was to generate a palette of
  colors on which would be later drawn the template and the presentation
  layout.
- As described before, the original colors were taken from IBM Corporate
- Identity and readapted for the project purposes
+ 
+\end_layout
+
+\begin_layout Standard
+As described before, the original colors were taken from IBM Corporate Identity
+ and readapted for the project purposes
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="4">
-<features tabularvalignment="middle">
+<lyxtabular version="3" rows="6" columns="4">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -158,19 +162,8 @@ The first choice that the UX unit has taken was to generate a palette of
 
 \begin_layout Plain Layout
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+\series bold
 Color
-
 \end_layout
 
 \end_inset
@@ -179,6 +172,8 @@ Color
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 Name
 \end_layout
 
@@ -188,7 +183,9 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-HTML HASH
+
+\series bold
+HTML HEX
 \end_layout
 
 \end_inset
@@ -197,6 +194,8 @@ HTML HASH
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 RGB
 \end_layout
 
@@ -211,7 +210,7 @@ RGB
 \begin_inset Graphics
 	filename /Users/phil/git/FakeNews/Presentation and docs/colors/022231.png
 	lyxscale 10
-	scale 10
+	scale 7
 	BoundingBox 0bp 0bp 100bp 100bp
 
 \end_inset
@@ -254,6 +253,14 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename colors/022b48.png
+	lyxscale 10
+	scale 7
+	BoundingBox 0bp 0bp 100bp 100bp
+
+\end_inset
+
 
 \end_layout
 
@@ -263,7 +270,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Green Vogue
 \end_layout
 
 \end_inset
@@ -272,7 +279,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+#022b48
 \end_layout
 
 \end_inset
@@ -281,7 +288,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2,43,72
 \end_layout
 
 \end_inset
@@ -292,6 +299,14 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename colors/0c3d5f.png
+	lyxscale 10
+	scale 7
+	BoundingBox 0bp 0bp 100bp 100bp
+
+\end_inset
+
 
 \end_layout
 
@@ -301,7 +316,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Tarawera
 \end_layout
 
 \end_inset
@@ -310,7 +325,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+#0c3d5f
 \end_layout
 
 \end_inset
@@ -319,7 +334,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12,61,96
 \end_layout
 
 \end_inset
@@ -330,6 +345,14 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename colors/0e486f.png
+	lyxscale 10
+	scale 7
+	BoundingBox 0bp 0bp 100bp 100bp
+
+\end_inset
+
 
 \end_layout
 
@@ -339,7 +362,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Chathams Blue
 \end_layout
 
 \end_inset
@@ -348,7 +371,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+#0e486f
 \end_layout
 
 \end_inset
@@ -357,45 +380,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+14,72,111
 \end_layout
 
 \end_inset
@@ -406,6 +391,14 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename colors/0d6797.png
+	lyxscale 10
+	scale 7
+	BoundingBox 0bp 0bp 100bp 100bp
+
+\end_inset
+
 
 \end_layout
 
@@ -415,7 +408,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Blue Chill
 \end_layout
 
 \end_inset
@@ -424,7 +417,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+#0d6797
 \end_layout
 
 \end_inset
@@ -433,7 +426,7 @@ Daintree
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13,103,151
 \end_layout
 
 \end_inset
@@ -474,6 +467,16 @@ GestIT
 \emph default
  remains the group formal name.
  
+\end_layout
+
+\begin_layout Standard
+The brand creation begun with logo's designing.
+ Such process included a through research of the main font, later found
+ as 
+\emph on
+Merriweather Black
+\emph default
+ and the application of the Palette colors.
 \end_layout
 
 \begin_layout Standard
@@ -529,16 +532,6 @@ Dr.Watson
 \end_layout
 
 \begin_layout Standard
-The brand creation begun with logo's designing.
- Such process included a through research of the main font, later found
- as 
-\emph on
-Merriweather Black
-\emph default
- and the application of the Palette colors.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -580,10 +573,6 @@ W
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-saddasd
 \end_layout
 
 \begin_layout Standard
