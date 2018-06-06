@@ -1,0 +1,91 @@
+1 Brand Identity and Design
+
+An important aspect of the project development concerned the 
+design of a Brand Identity that characterized in an unique 
+fashion the final product delivered. The inspirational colors and 
+shapes of the whole front-end and presentation stack resembles 
+the undeniable suggestion of confidence that IBM first-rate 
+services offer. The choice to include a Brand Identity chapter in 
+this document stems from the fact that, due to the high 
+complexity of the evaluation algorithm, a good visualization mask 
+needed to be developed in order to convey the robustness and 
+sophistication that the algorithmic part present, while enabling 
+not experts of the Machine Learning field to understand the 
+potential of this tool.
+
+Certainly, a future possible development is the production (thus 
+public distribution) of the platform as example of combined AI 
+technologies applied to the real life.
+
+1.1 Colors shades
+
+[float Figure:
+<Graphics file: /Users/phil/git/FakeNews/Presentation and docs/colors.png>
+
+[Figure 1: 
+Palette of colors used on the front-end/presentation layer of the 
+project
+]
+]
+
+The first choice that the UX unit has taken was to generate a 
+palette of colors on which would be later drawn the template and 
+the presentation layout. 
+
+As described before, the original colors were taken from IBM 
+Corporate Identity and readapted for the project purposes
+
+
++------------------------------------------------------------------------------------+----------------+-----------+------------+
+|                                       Color                                        |     Name       | HTML HEX  |    RGB     |
++------------------------------------------------------------------------------------+----------------+-----------+------------+
+| <Graphics file: /Users/phil/git/FakeNews/Presentation and docs/colors/022231.png>  |   Daintree     | #022231   |  2,34,49   |
++------------------------------------------------------------------------------------+----------------+-----------+------------+
+| <Graphics file: /Users/phil/git/FakeNews/Presentation and docs/colors/022b48.png>  |  Green Vogue   | #022b48   |  2,43,72   |
++------------------------------------------------------------------------------------+----------------+-----------+------------+
+| <Graphics file: /Users/phil/git/FakeNews/Presentation and docs/colors/0c3d5f.png>  |   Tarawera     | #0c3d5f   |  12,61,96  |
++------------------------------------------------------------------------------------+----------------+-----------+------------+
+| <Graphics file: /Users/phil/git/FakeNews/Presentation and docs/colors/0e486f.png>  | Chathams Blue  | #0e486f   | 14,72,111  |
++------------------------------------------------------------------------------------+----------------+-----------+------------+
+| <Graphics file: /Users/phil/git/FakeNews/Presentation and docs/colors/0d6797.png>  |  Blue Chill    | #0d6797   | 13,103,151 |
++------------------------------------------------------------------------------------+----------------+-----------+------------+
+
+
+1.2 Brand creation
+
+Inspired by the name of IBM's utilized service “Watson”, we 
+appeal to our project the name “Dr.Watson”, a fictional character 
+in the Sherlock Holmes stories by Sir Arthur Conan Doyle, while 
+GestIT remains the group formal name. 
+
+The brand creation begun with logo's designing. Such process 
+included a through research of the main font, later found as 
+Merriweather Black and the application of the Palette colors.
+
+[float Figure:
+<Graphics file: /Users/phil/git/FakeNews/Presentation and docs/logo_grid.png>
+ 
+
+[Figure 2: 
+First sketch of “W” which stands for Watson of “Dr.Watson”
+]
+]
+
+[float Figure:
+<Graphics file: /Users/phil/git/FakeNews/Presentation and docs/logo_shadows.png>
+ 
+
+[Figure 3: 
+Final “W” with transparent background
+]
+]
+
+[float Figure:
+<Graphics file: /Users/phil/git/FakeNews/Presentation and docs/logo_shadows_bg.png>
+ 
+
+[Figure 4: 
+Final “W” with dark blue background
+]
+]
+
