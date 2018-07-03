@@ -2,42 +2,42 @@
    {
       "tweet_id":"604303146203103233",
       "predictedId":0,
-      "confidence": 78,
+      "confidence": 71,
       "predicted_isFake":false,
       "sentiment":"joy"
    },
    {
       "tweet_id":"605394876058992641",
       "predictedId":1,
-      "confidence": 78,
+      "confidence": 91,
       "predicted_isFake":true,
       "sentiment":"sadness"
    },
    {
       "tweet_id":"613707919402606592",
       "predictedId":0,
-      "confidence":75,
+      "confidence":78,
       "predicted_isFake":true,
       "sentiment":"anger"
    },
    {
       "tweet_id":"625323253930668033",
       "predictedId":0,
-      "confidence": 78,
+      "confidence": 72,
       "predicted_isFake":false,
       "sentiment":"joy"
    },
    {
       "tweet_id":"639150523304689664",
       "predictedId":0,
-      "confidence": 78,
+      "confidence": 82,
       "predicted_isFake":false,
       "sentiment":"disgust"
    },
    {
       "tweet_id":"655136737853853700",
       "predictedId":0,
-      "confidence": 78,
+      "confidence": 74,
       "predicted_isFake":false,
       "sentiment":"fear"
    },
@@ -51,35 +51,35 @@
    {
       "tweet_id":"674359085098123265",
       "predictedId":0,
-      "confidence": 76,
+      "confidence": 70,
       "predicted_isFake":true,
       "sentiment":"joy"
    },
    {
       "tweet_id":"677222986429018112",
       "predictedId":1,
-      "confidence": 70,
+      "confidence": 88,
       "predicted_isFake":true,
       "sentiment":"fear"
    },
    {
       "tweet_id":"677836006897266688",
       "predictedId":0,
-      "confidence": 78,
+      "confidence": 75,
       "predicted_isFake":false,
       "sentiment":"anger"
    },
    {
       "tweet_id":"777906418527637504",
       "predictedId":0,
-      "confidence": 78,
+      "confidence": 77,
       "predicted_isFake":false,
       "sentiment":"disgust"
    },
    {
       "tweet_id":"778528661901234176",
       "predictedId":0,
-      "confidence": 76,
+      "confidence": 71,
       "predicted_isFake":false,
       "sentiment":"disgust"
    },
@@ -93,7 +93,7 @@
    {
       "tweet_id":"786369653421576192",
       "predictedId":0,
-      "confidence": 78,
+      "confidence": 81,
       "predicted_isFake":false,
       "sentiment":"disgust"
    },
