@@ -1,0 +1,21 @@
+.blog-card {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.blog-card.spring-fever {
+  background-color: rgba(237, 241, 254, 1);
+}
+
+.blog-card:hover .card-info {
+  opacity: 1;
+  bottom: 120px;
+}
+
+.blog-card:hover .color-overlay {
+  background: rgba(84, 104, 110, 0.8);
+}
